@@ -9,5 +9,14 @@
         android:id="@+id/phonesFragment"
         android:name="cl.awakelab.sprint6.presentation.PhonesFragment"
         android:label="fragment_phones"
-        tools:layout="@layout/fragment_phones" />
+        tools:layout="@layout/fragment_phones" >
+        <action
+            android:id="@+id/action_phonesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="cl.awakelab.sprint6.presentation.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
 </navigation>

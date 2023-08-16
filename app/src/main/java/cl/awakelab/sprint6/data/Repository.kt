@@ -20,4 +20,12 @@ class Repository(private val phoneAPI: PhoneAPI, private val phoneDAO: PhoneDao)
         }
     }
 
+    suspend fun getDetail(id: Int) {
+        val response = phoneAPI.getDetail(id)
+        if(response.isSuccessful) {
+            val response = response.body()!!
+            print(response)
+        }
+    }
+
 }
