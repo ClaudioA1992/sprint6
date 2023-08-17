@@ -15,7 +15,7 @@ interface PhoneDao {
     suspend fun insertPhone(phone: PhoneEntity)
 
     @Insert(onConflict=OnConflictStrategy.REPLACE)
-    suspend fun insertPhone(phones: List<PhoneEntity>)
+    suspend fun insertPhones(phones: List<PhoneEntity>)
 
     @Insert(onConflict=OnConflictStrategy.REPLACE)
     suspend fun insertPhoneDetail(phoneDetail: PhoneDetailEntity)

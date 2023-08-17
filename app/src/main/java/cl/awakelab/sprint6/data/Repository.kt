@@ -16,7 +16,11 @@ class Repository(private val phoneAPI: PhoneAPI, private val phoneDAO: PhoneDao)
         val response = phoneAPI.getAllPhones()
         if(response.isSuccessful) {
             val response = response.body()!!
-            print(response)
+            print("Response: " + response)
+            response.let{
+                val phoneEntities = it.map {it.transformToEntity(it)}
+                phoneDAO.insertPhones(phoneEntities)
+            }
         }
     }
 
@@ -24,8 +28,9 @@ class Repository(private val phoneAPI: PhoneAPI, private val phoneDAO: PhoneDao)
         val response = phoneAPI.getDetail(id)
         if(response.isSuccessful) {
             val response = response.body()!!
-            print(response)
+            print("Response: " + response)
         }
     }
 
 }
+
