@@ -11,37 +11,41 @@
         android:id="@+id/textViewDetailName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageViewPhoneDetail"
-        app:layout_constraintTop_toTopOf="@+id/imageViewPhoneDetail" />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewDetailPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textViewDetailName"
-        app:layout_constraintStart_toStartOf="@+id/textViewDetailName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailName" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewDetailLastPrice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailLastPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLastPrice" />
 
     <TextView
         android:id="@+id/textViewDetailDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewPhoneDetail"
-        app:layout_constraintEnd_toEndOf="@+id/textViewDetailPrice"
-        app:layout_constraintStart_toStartOf="@+id/textViewDetailPrice"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailPrice"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewPhoneDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
         android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
@@ -50,20 +54,30 @@
         android:id="@+id/textViewDetailLastPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
-        app:layout_constraintStart_toEndOf="@+id/textViewDetailName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewPhoneDetail"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPhoneDetail" />
 
     <TextView
         android:id="@+id/textViewDetailCredit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textViewDetailLastPrice"
-        app:layout_constraintStart_toStartOf="@+id/textViewDetailLastPrice"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLastPrice" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewDetailPrice"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailPrice"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailPrice" />
+
+    <Button
+        android:id="@+id/buttonContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/texto_boton_contacto"
+        app:icon="@drawable/baseline_mail_outline_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

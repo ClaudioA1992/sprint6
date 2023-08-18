@@ -1,6 +1,7 @@
 package cl.awakelab.sprint6.presentation
 
 import android.app.Application
+import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import cl.awakelab.sprint6.data.Repository
@@ -22,12 +23,12 @@ class StoreViewModel(application: Application): AndroidViewModel(application) {
         repository = Repository(api, phoneDatabase)
     }
 
-    fun getAllPhones() = viewModelScope.launch {
-        repository.getPhones()
+    fun getAllPhones(context: Context) = viewModelScope.launch {
+        repository.getPhones(context)
     }
 
-    fun getPhoneDetail(id: Int) = viewModelScope.launch {
-        repository.getDetail(id)
+    fun getPhoneDetail(id: Int, context: Context) = viewModelScope.launch {
+        repository.getDetail(id, context)
     }
 
 }

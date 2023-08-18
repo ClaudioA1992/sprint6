@@ -19,7 +19,7 @@ class PhoneAdapter: RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
         fun bind(phone: PhoneEntity) {
             phoneBinding.imageViewPhone.load(phone.image)
             phoneBinding.textViewPhoneName.text = phone.name
-            phoneBinding.textViewPhonePrice.text = phone.price.toString()
+            phoneBinding.textViewPhonePrice.text = "$"+phone.price.toString()
             var bundle: Bundle = Bundle()
             bundle.putString("id", phone.id.toString())
             phoneBinding.constraintLayoutPhone.setOnClickListener {

@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import cl.awakelab.sprint6.R
+import androidx.recyclerview.widget.GridLayoutManager
 import cl.awakelab.sprint6.databinding.FragmentPhonesBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,7 +39,7 @@ class PhonesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentPhonesBinding.inflate(layoutInflater, container, false)
-        storeViewModel.getAllPhones()
+        storeViewModel.getAllPhones(requireContext())
         initAdapter()
         return binding.root
     }
@@ -50,6 +50,8 @@ class PhonesFragment : Fragment() {
         storeViewModel.phoneLiveData().observe(viewLifecycleOwner) {
             adapter.setData(it)
         }
+        val layoutManager = GridLayoutManager(this.context, 2)
+        binding.recyclerViewPhones.setLayoutManager(layoutManager);
     }
 }
 

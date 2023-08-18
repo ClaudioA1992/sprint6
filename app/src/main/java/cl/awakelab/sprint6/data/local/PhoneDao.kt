@@ -18,13 +18,13 @@ interface PhoneDao {
     suspend fun insertPhones(phones: List<PhoneEntity>)
 
     @Insert(onConflict=OnConflictStrategy.REPLACE)
-    suspend fun insertPhoneDetail(phoneDetail: PhoneDetailEntity)
+    suspend fun insertPhoneDetail(phoneDetailEntity: PhoneDetailEntity)
 
     @Query("select * from phone order by name asc")
     fun selectPhones(): LiveData<List<PhoneEntity>>
 
     @Query("select * from phone_detail where id = :id order by name asc")
-    fun selectPhonesDetail(id: Int): LiveData<PhoneDetailEntity>
+    fun selectPhoneDetail(id: Int): LiveData<PhoneDetailEntity>
 
 }
 

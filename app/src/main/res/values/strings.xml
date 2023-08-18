@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">sprint6</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texto_boton_contacto">Contactar área de ventas</string>
+    <string name="last_price">Último precio: $</string>
+    <string name="actual_price">Ahora: $</string>
+    <string name="accepts_credit">Acepta crédito</string>
+    <string name="only_cash">Solo efectivo</string>
+    <string name="corporative_email">info@novaera.cl</string>
+    <string name="disconnected_phones">No internet connection. Phones retrieved from database.</string>
+    <string name="disconnected_detail">No internet connection. Details retrieved from database.</string>
 </resources>
